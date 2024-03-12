@@ -23,21 +23,22 @@ public class AuthController {
 
     @PostMapping("/login")
     public HashMap<String, String> LogIn(@RequestBody LogInDto logInDto) {
+        String token = authService.logIn(logInDto);
         HashMap<String, String> infoToken = new HashMap<>();
-        infoToken.put("token", "jwt");
+        infoToken.put("token", token);
         return infoToken;
     }
 
     @GetMapping("/me")
     public UsersDto getMe() {
-        return usersService.getAUser(1);
+        return authService.getMyInfo();
     }
 
     @PostMapping("/register")
     public HashMap<String, String> register(@RequestBody RegisterDto registerDto) {
-        authService.createUser(registerDto);
+        String token = authService.createUser(registerDto);
         HashMap<String, String> infoTokenReg = new HashMap<>();
-        infoTokenReg.put("token", "jwt");
+        infoTokenReg.put("token", token);
         return infoTokenReg;
     }
 }
