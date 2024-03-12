@@ -1,6 +1,7 @@
 package com.chatop.ChaTopApp.service;
 
 import com.chatop.ChaTopApp.dto.RentalsDto;
+import com.chatop.ChaTopApp.dto.UsersDto;
 import com.chatop.ChaTopApp.model.Rentals;
 import com.chatop.ChaTopApp.model.Users;
 import com.chatop.ChaTopApp.repository.RentalsRepository;
@@ -19,11 +20,13 @@ import org.springframework.web.multipart.MultipartFile;
 @Slf4j
 @Service
 public class RentalsService {
+    @Autowired
+    private UsersRepository usersRepository;
 
     @Autowired
     private RentalsRepository rentalsRepository;
     @Autowired
-    private UsersRepository usersRepository;
+    private AuthService authService;
 
     public Rentals createRental(HashMap<String, String> rentalInfo, MultipartFile picture) {
         Rentals newRental = createRentalWithData(rentalInfo);
@@ -35,7 +38,7 @@ public class RentalsService {
     }
 
     public Rentals createRentalWithData(HashMap<String, String> rentalInfo) {
-        // à modifier pour la sécurité
+
         Rentals rental = new Rentals();
         try {
             if(rentalInfo.containsKey("surface")) {
@@ -50,8 +53,9 @@ public class RentalsService {
             if(rentalInfo.containsKey("name")) {
                 rental.setName(rentalInfo.get("name"));
             }
-            // à modifier après la sécurité, obtenir le user connecté
-            Optional<Users> user = usersRepository.findById(1);
+            // Récupère l'user connecté
+            UsersDto usersDto = authService.getMyInfo();
+            Optional<Users> user = usersRepository.findById(usersDto.getId());
             rental.setOwner(user.get());
             return rental;
 
