@@ -6,6 +6,11 @@ import com.chatop.ChaTopApp.dto.UsersDto;
 import com.chatop.ChaTopApp.model.Users;
 import com.chatop.ChaTopApp.service.AuthService;
 import com.chatop.ChaTopApp.service.UsersService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +38,15 @@ public class AuthController {
     public UsersDto getMe() {
         return authService.getMyInfo();
     }
+
+    @Operation(
+            summary = "Sign up to chatop and return a token",
+            description = "Send a Register object (name, email, password) to sign up")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", content = {@Content(schema = @Schema(implementation = RegisterDto.class),
+                    mediaType = "application/json")}),
+            @ApiResponse(responseCode = "400")
+    })
 
     @PostMapping("/register")
     public HashMap<String, String> register(@RequestBody RegisterDto registerDto) {

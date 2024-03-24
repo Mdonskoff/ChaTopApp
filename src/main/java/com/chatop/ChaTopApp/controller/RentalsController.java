@@ -29,8 +29,8 @@ public class RentalsController {
         return null;
     }
 
-    @PutMapping("/{id}")
-    public HashMap<String, String> putRental(@PathVariable int id, @RequestBody HashMap<String, String> infoRental) {
+    @PutMapping(value = "/{id}")
+    public HashMap<String, String> putRental(@PathVariable int id, @RequestParam HashMap<String, String> infoRental) {
         log.info(String.valueOf(infoRental));
         if (rentalsService.updateARental(id, infoRental) != null) {
             HashMap<String, String> infoMessage = new HashMap<>();

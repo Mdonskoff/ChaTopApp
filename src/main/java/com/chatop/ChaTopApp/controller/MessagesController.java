@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 @Slf4j
 @RestController
-@RequestMapping
+@RequestMapping("/api")
 public class MessagesController {
 
     @Autowired
