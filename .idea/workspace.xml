@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a94db9cf-2ce5-4505-aadd-e0902c5f4811" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChaTopApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChaTopApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/ChaTopAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/ChaTopAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/configuration/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/service/RentalsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/service/RentalsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/RentalsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/RentalsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/dto/RegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/model/Rentals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chatop/ChaTopApp/model/Rentals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +78,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chatop.ChaTopApp.configuration" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,7 +194,8 @@
       <workItem from="1708958767878" duration="18430000" />
       <workItem from="1709392919711" duration="23000" />
       <workItem from="1709393480057" duration="30388000" />
-      <workItem from="1710182091698" duration="4679000" />
+      <workItem from="1710182091698" duration="23455000" />
+      <workItem from="1711228731728" duration="4834000" />
     </task>
     <servers />
   </component>
