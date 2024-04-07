@@ -4,20 +4,21 @@
 Implement the back-end of an Angular website. This is a seasonal rental application. 
 
 ### Technology
-Java 17
-Spring Boot
-IDE (IntelliJ)
-MySql Workbench or a MySql database installed
-Software (like Postman)
+- Java 17
+- Spring Boot
+- IDE (IntelliJ)
+- MySql Workbench (or a MySql database installed)
+- Software (like Postman)
+- Cloudinary (a cloud medias server)
 
 ## How to build
 - Clone this repository in a local location on your machine.
-- Connect to MySql Workbench and import the database.sql file in the ChaTopApp folder.
-- Execute the SQL script to create the database and tables users, rental and message.
+- ?? Connect to MySql Workbench and import the database.sql file in the ChaTopApp folder.
+- ?? Execute the SQL script to create the database and tables users, rental and message.
 - Open the ChaTopApp project with IntelliJ.
-- Modify the DB_USERNAME and DB_PASSWORD variables in the .env file. These are the variables that allow you to connect to Mysql. 
+- Modify the DB_USERNAME and DB_PASSWORD variables in the .env file. These are the variables that allow you to connect to MySql. 
 - Check the other variables and adapt them to your environment if necessary.
-- Run the application with intellij.
+- Run the application with IntelliJ.
 You can now use a software like Postman or a front-end app (Angular, React etc...) to communicate with the back-end.
 
 ### API documentation

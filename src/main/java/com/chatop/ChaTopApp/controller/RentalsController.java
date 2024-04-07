@@ -1,7 +1,6 @@
 package com.chatop.ChaTopApp.controller;
 
 import com.chatop.ChaTopApp.dto.RentalsDto;
-import com.chatop.ChaTopApp.model.Rentals;
 import com.chatop.ChaTopApp.service.RentalsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

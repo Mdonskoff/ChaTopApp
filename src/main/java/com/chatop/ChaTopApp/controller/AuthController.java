@@ -3,7 +3,6 @@ package com.chatop.ChaTopApp.controller;
 import com.chatop.ChaTopApp.dto.LogInDto;
 import com.chatop.ChaTopApp.dto.RegisterDto;
 import com.chatop.ChaTopApp.dto.UsersDto;
-import com.chatop.ChaTopApp.model.Users;
 import com.chatop.ChaTopApp.service.AuthService;
 import com.chatop.ChaTopApp.service.UsersService;
 import io.swagger.v3.oas.annotations.Operation;
