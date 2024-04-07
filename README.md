@@ -16,8 +16,14 @@ Implement the back-end of an Angular website. This is a seasonal rental applicat
 - Connect to MySql Workbench and import the Database.sql file in the ChaTopApp folder.
 - Execute the SQL script to create the database and tables users, rentals and messages.
 - Open the ChaTopApp project with IntelliJ.
-- Modify the DB_USERNAME and DB_PASSWORD variables in the .env file. These are the variables that allow you to connect to MySql. 
-- Create an Cloudinary account and copy the API environment variable in the Cloudinary variable in the .env file
+- To avoid displaying sensitive data, create a .env file to ChatTopApp project.
+- In the .env file, adapt the DATABASE_USERNAME and DATABASE_PASSWORD variables (as shown in the application.properties file). These are the variables that allow you to connect to MySql.   
+Like that :  
+  `DATABASE_USERNAME=username`  
+  `DATABASE_PASSWORD=password`  
+  `DATABASE_URL=urlofyourdatabase`
+- Create an Cloudinary account and copy the API environment variable in the Cloudinary variable in the .env file  
+``CLOUDINARY_URL=cloudinary://youraccountvariable``
 - Check the other variables and adapt them to your environment if necessary.
 - Run the application with IntelliJ.
 You can now use a software like Postman or a front-end app (Angular, React etc...) to communicate with the back-end.
