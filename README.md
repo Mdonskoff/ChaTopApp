@@ -13,8 +13,8 @@ Implement the back-end of an Angular website. This is a seasonal rental applicat
 
 ## How to build
 - Clone this repository in a local location on your machine.
-- ?? Connect to MySql Workbench and import the database.sql file in the ChaTopApp folder.
-- ?? Execute the SQL script to create the database and tables users, rental and message.
+- Connect to MySql Workbench and import the Database.sql file in the ChaTopApp folder.
+- Execute the SQL script to create the database and tables users, rentals and messages.
 - Open the ChaTopApp project with IntelliJ.
 - Modify the DB_USERNAME and DB_PASSWORD variables in the .env file. These are the variables that allow you to connect to MySql. 
 - Check the other variables and adapt them to your environment if necessary.

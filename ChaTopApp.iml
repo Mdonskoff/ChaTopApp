@@ -154,4 +154,11 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.3" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:swagger-ui:5.11.8" level="project" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/src/main/resources/templates" />
+      </list>
+    </option>
+  </component>
 </module>
