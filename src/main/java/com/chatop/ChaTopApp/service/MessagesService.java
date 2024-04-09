@@ -33,8 +33,9 @@ public class MessagesService {
         Users user = usersRepository.findById(messagesDto.getUser_id()).get();
         messages.setUser(user);
         messages.setRental(rental);
-        Messages savedMessage = messagesRepository.save(messages);
-        return savedMessage;
+        return messagesRepository.save(messages);
+        //Messages savedMessage = messagesRepository.save(messages);
+        //return savedMessage;
     }
 
 

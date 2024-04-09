@@ -53,6 +53,7 @@ public class RentalsService {
             if(rentalInfo.containsKey("name")) {
                 rental.setName(rentalInfo.get("name"));
             }
+
             // Récupère l'user connecté
             UsersDto usersDto = authService.getMyInfo();
             Optional<Users> user = usersRepository.findById(usersDto.getId());

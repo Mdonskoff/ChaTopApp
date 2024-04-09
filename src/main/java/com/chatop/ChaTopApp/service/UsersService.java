@@ -18,8 +18,7 @@ public class UsersService {
 
     public Users saveUser(Users user) {
         user.setId(-1); //ça créera toujours un nouvel user
-        Users savedUser = usersRepository.save(user);
-        return savedUser;
+        return usersRepository.save(user);
     }
 
     public UsersDto getAUser(int idUser) {

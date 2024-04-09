@@ -23,6 +23,7 @@ public class SecurityConfig {
     @Autowired
     private AuthenticationProvider authenticationProvider;
 
+    //Sécurise toutes les routes sauf exceptions
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -41,6 +42,7 @@ public class SecurityConfig {
         return http.build();
     }
 
+    //URL authorisations pour la documentation
     private static final String[] AUTH_WHITELIST = {
             "/v3/api-docs/**",
             "/v3/api-doc.yaml",
