@@ -16,29 +16,21 @@ public class UsersService {
     @Autowired
     private UsersRepository usersRepository;
 
-    public Users saveUser(Users user) {
-        user.setId(-1); //ça créera toujours un nouvel user
-        return usersRepository.save(user);
+    public UsersDto saveUser(Users user) {
+        user.setId(-1);
+        user = usersRepository.save(user);
+        return new UsersDto(user.getId(), user.getName(), user.getEmail(), user.getCreated_at(), user.getUpdated_at());
     }
 
     public UsersDto getAUser(int idUser) {
         try {
-            Users user;
-            user = usersRepository.findById(idUser).get();
-            UsersDto userDto = new UsersDto();
-            userDto.setId(user.getId());
-            userDto.setName(user.getName());
-            userDto.setEmail(user.getEmail());
-            userDto.setCreated_at(user.getCreated_at());
-            userDto.setUpdated_at(user.getUpdated_at());
-            return userDto;
+            Users user = usersRepository.findById(idUser).get();
+            return new UsersDto(user.getId(), user.getName(), user.getEmail(), user.getCreated_at(), user.getUpdated_at());
 
         } catch(Exception e) {
             log.error(e.getMessage()+ "Erreur dans getUser");
             return null;
         }
     }
-    public List<Users> getAllUsers() {
-        return usersRepository.findAll();
-    }
+
 }

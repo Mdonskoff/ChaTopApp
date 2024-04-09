@@ -28,14 +28,11 @@ public class MessagesService {
     public Messages saveMessage(MessagesDto messagesDto) {
         Messages messages = new Messages();
         messages.setMessage(messagesDto.getMessage());
-
         Rentals rental = rentalsService.getARental(messagesDto.getRental_id());
         Users user = usersRepository.findById(messagesDto.getUser_id()).get();
         messages.setUser(user);
         messages.setRental(rental);
         return messagesRepository.save(messages);
-        //Messages savedMessage = messagesRepository.save(messages);
-        //return savedMessage;
     }
 
 

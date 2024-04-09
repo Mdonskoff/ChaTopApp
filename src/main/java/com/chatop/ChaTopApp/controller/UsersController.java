@@ -9,9 +9,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @Slf4j
 @RestController
@@ -29,8 +29,8 @@ public class UsersController {
             @ApiResponse(responseCode = "401")
     })
     @PostMapping("")
-    public Users createUser(@RequestBody Users user) {
-        return usersService.saveUser(user);
+    public ResponseEntity<UsersDto> createUser(@RequestBody Users user) {
+        return ResponseEntity.ok(usersService.saveUser(user));
     }
 
     @Operation(
@@ -41,20 +41,7 @@ public class UsersController {
             @ApiResponse(responseCode = "401")
     })
     @GetMapping("/{id}")
-    public UsersDto getUser(@PathVariable int id) {
-        return usersService.getAUser(id);
+    public ResponseEntity<UsersDto> getUser(@PathVariable int id) {
+        return ResponseEntity.ok(usersService.getAUser(id));
     }
-
-    @Operation(
-            summary = "Get all user",
-            description = "Get a list of all users informations")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200", content = {@Content(mediaType = "application/json")}),
-            @ApiResponse(responseCode = "401")
-    })
-    @GetMapping("")
-    public List<Users> getAllUsers() {
-        return usersService.getAllUsers();
-    }
-
 }

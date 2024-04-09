@@ -3,10 +3,11 @@ package com.chatop.ChaTopApp.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
-public class LogInDto {
-    private String email;
-    private String password;
+public class AllRentalsDto {
 
+    private List<RentalsDto> rentals;
 }

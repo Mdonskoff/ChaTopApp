@@ -48,11 +48,8 @@ public class AuthService {
         user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
         usersRepository.save(user);
 
-        LogInDto logInDto = new LogInDto();
-        logInDto.setEmail(registerDto.getEmail());
-        logInDto.setPassword(registerDto.getPassword());
-        String token = logIn(logInDto);
-        return token;
+        LogInDto logInDto = new LogInDto(registerDto.getEmail(), registerDto.getPassword());
+        return logIn(logInDto);
     }
 
     public String logIn(LogInDto logInDto) {
@@ -68,8 +65,7 @@ public class AuthService {
             );
             Users user = usersRepository.findByEmail(logInDto.getEmail())
                     .orElseThrow();
-            String jwtToken = jwtService.generateToken(user);
-            return jwtToken;
+           return jwtService.generateToken(user);
         }catch(Exception ex) {
             log.error("erreur de connexion " + ex);
             return "";

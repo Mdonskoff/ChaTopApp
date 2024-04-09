@@ -61,7 +61,7 @@ public class RentalsService {
             return rental;
 
         }catch (Exception ex) {
-            log.error("[createRentalWithData] ", ex.getMessage());
+            log.error("[createRentalWithData]", ex.getMessage());
             return null;
         }
     }
@@ -83,11 +83,8 @@ public class RentalsService {
 
     public RentalsDto getARentalDto(int idRental) {
         try {
-            Rentals rental;
-            rental = rentalsRepository.findById(idRental).get();
-
-            RentalsDto dto = convertRentalsToRentalsDto(rental);
-            return dto;
+            Rentals rental = rentalsRepository.findById(idRental).get();
+            return convertRentalsToRentalsDto(rental);
         } catch(Exception e) {
             log.error(e.getMessage()+ "Erreur dans getRental");
             return null;
@@ -114,9 +111,7 @@ public class RentalsService {
         if (infoRental.containsKey("description")) {
             rental.setDescription(infoRental.get("description"));
         }
-        Rentals updatedRental = rentalsRepository.save(rental);
-        RentalsDto dto = convertRentalsToRentalsDto(updatedRental);
-        return dto;
+        return convertRentalsToRentalsDto(rentalsRepository.save(rental));
     }
 
     public List<RentalsDto> getAllRentals() {

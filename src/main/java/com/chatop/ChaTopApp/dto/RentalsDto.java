@@ -1,6 +1,5 @@
 package com.chatop.ChaTopApp.dto;
 
-
 import lombok.Data;
 
 import java.util.Date;
